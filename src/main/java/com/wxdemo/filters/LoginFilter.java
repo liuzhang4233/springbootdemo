@@ -16,9 +16,9 @@ public class LoginFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
 //        servletRequest.getServletContext().co
-        HttpServletRequest request = (HttpServletRequest)servletRequest;
-        Cookie cookie = new Cookie("user","user");
-
+        HttpServletRequest request = (HttpServletRequest) servletRequest;
+        Cookie cookie = new Cookie("user", "user");
+        filterChain.doFilter(servletRequest, servletResponse);
     }
 
     @Override
